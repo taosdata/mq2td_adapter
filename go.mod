@@ -1,4 +1,4 @@
-module github.com/huskar-t/mqtt_example
+module github.com/taosdata/mq2td_adapter
 
 go 1.14
 

@@ -4,16 +4,17 @@ import (
 	"database/sql"
 	"flag"
 	"fmt"
-	"github.com/huskar-t/mqtt_example/config"
+	"os"
+	"os/signal"
+	"syscall"
+	"time"
+
 	"github.com/sirupsen/logrus"
 	_ "github.com/taosdata/driver-go/v2/taosSql"
 	"github.com/taosdata/go-utils/mqtt"
 	"github.com/taosdata/go-utils/pool"
 	"github.com/taosdata/go-utils/rule"
-	"os"
-	"os/signal"
-	"syscall"
-	"time"
+	"github.com/taosdata/mq2td_adapter/config"
 )
 
 func main() {
