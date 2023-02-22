@@ -59,8 +59,5 @@ jobs:
       - name: install mosquitto
         run: sudo apt install -y mosquitto
 
-      - name: run mosquitto
-        run: nohup sudo mosquitto &
-
       - name: Test
         run: cd ./mq2td && go test -v --count=1 ./...
