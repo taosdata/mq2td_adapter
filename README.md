@@ -102,9 +102,29 @@ go build
 ```
   -c string
         Configuration file path (default "./config/config.json")
-  -rc string
+  --rc string
         Rule configuration file path (default "./config/rule.json")
 ```
+
+## Log configuration
+
+```json
+{
+   "log": {
+     "path": "/var/log/taos2",
+     "rotationCount": 7,
+     "rotationTime": "1d",
+     "rotationSize": "1GB"
+   }
+}
+```
+
+* `log.path` log file directory
+* `log.rotationCount` the number of logs to keep
+* `log.rotationTime` log splitting time limit
+* `log.rotationSize` log splitting size limit
+
+When either the time limit or size limit is triggered, log splitting will be performed. If the number of log files is greater than the number of retained count, the oldest log file will be deleted according to the modification time.
 
 ## Configuration example
 See [example folder](example)

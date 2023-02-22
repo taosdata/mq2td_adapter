@@ -102,8 +102,28 @@ go build
 ```
   -c string
         配置文件路径 (默认 "./config/config.json")
-  -rc string
+  --rc string
         规则配置文件路径 (默认 "./config/rule.json")
 ```
+## 日志配置
+
+```json
+{
+  "log": {
+    "path": "/var/log/taos2",
+    "rotationCount": 7,
+    "rotationTime": "1d",
+    "rotationSize": "1GB"
+  }
+}
+```
+
+* `log.path` 日志文件目录
+* `log.rotationCount` 日志保留份数
+* `log.rotationTime` 日志分割时间限制
+* `log.rotationSize` 日志分割大小限制
+
+当时间限制和大小限制任一触发都将进行日志分割，如果日志文件数量大于保留份数会按照修改时间删除最老的日志文件。
+
 ## 配置样例
 见 [example folder](./example)
