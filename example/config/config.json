@@ -1,18 +1,24 @@
 {
+  "showSql": true,
   "mqtt": {
-    "Address": "ssl://127.0.0.1:8883",
-    "ClientID": "example",
-    "KeepAlive": 30,
-    "CAPath": "cacert.pem",
-    "CertPath": "client-cert.pem",
-    "KeyPath": "client-key.pem"
+    "Address": "tcp://127.0.0.1:1883",
+    "clientID": "example",
+    "keepAlive": 30,
+    "cAPath": "cacert.pem",
+    "certPath": "client-cert.pem",
+    "keyPath": "client-key.pem"
   },
   "TDengine": {
     "host": "127.0.0.1",
     "port": 6030,
     "user": "root",
     "password": "taosdata",
-    "db": "test_mqtt"
+    "db": "test_mqtt2"
   },
-  "showSql": true
+  "log": {
+    "path": "/var/log/taos",
+    "rotationCount": 7,
+    "rotationTime": "1d",
+    "rotationSize": "1GB"
+  }
 }
