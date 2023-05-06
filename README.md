@@ -128,3 +128,11 @@ When either the time limit or size limit is triggered, log splitting will be per
 
 ## Configuration example
 See [example folder](example)
+
+## Launch
+
+Assume you are under the directory where `mq2td_adapter` is located, please use the command below to run:
+
+```shell
+nohup ./mq2td_adapter >/dev/null 2>&1 &
+```
